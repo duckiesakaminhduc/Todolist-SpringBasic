@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Thêm công việc</title>
+</head>
+<body>
+<h1>Thêm công việc</h1>
+<form th:action="@{/addTodo}" th:object="${task}" method="post">
+    <p> Tiêu đề: <input type="text" placeholder="Nhập công việc" th:field="*{title}"></p>
+    <p>Mô tả: <input type="text" placeholder="Mô tả chi tiết" th:field="*{detail}"></p>
+    <input type="submit" value="Thêm">
+</form>
+</body>
+</html>
